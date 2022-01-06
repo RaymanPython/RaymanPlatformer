@@ -23,6 +23,8 @@ class Player(pygame.sprite.Sprite):
         # Создаем изображение для игрока
         # Изображение находится в этой же папке проекта
         self.image = pygame.image.load('image//ray.jpg')
+        color = image.get_at((0,0)) #we get the color of the upper-left corner pixel
+        image.set_colorkey(color)
 
         # Установите ссылку на изображение прямоугольника
         self.rect = self.image.get_rect()
